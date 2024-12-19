@@ -1,0 +1,120 @@
+/* .topbar.collapsedtopbar {
+    width: calc(100% - 80px); 
+} */
+.topbar {
+    width: calc(100% - 240px); /* Default width with expanded sidebar */
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    
+    transition: width 0.3s, margin-left 0.3s;
+    margin-left: 240px; /* Default margin with expanded sidebar */
+}
+
+.topbar.collapsedtopbar {
+    width: calc(100% - 80px); /* Width when sidebar is collapsed */
+    margin-left: 80px; /* Margin when sidebar is collapsed */
+}
+
+.breadcrumb {
+    font-size: 16px;
+    color: #333;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.username {
+    font-size: 16px;
+}
+
+
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    z-index: 1000;
+  }
+  
+  .profile-header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .profile-pic-large {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .profile-options {
+    padding: 10px;
+  }
+  
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+    
+  .dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .logout {
+    color: #e74c3c;
+  }
+  
+  .icon-profile, .icon-logout {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  /* Show the dropdown */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  

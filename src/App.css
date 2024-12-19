@@ -1,0 +1,78 @@
+
+
+.App {
+  display: flex;
+
+}
+html, body, #root {
+ background-color: rgb(206, 207, 206);
+}
+
+
+
+
+.content {
+  width: calc(100% - 240px); 
+  margin-top: 60px;
+  margin-left: 240px;
+  padding: 10px;
+  transition: margin-left 0.3s;
+  height:  calc(100vh - 60px); 
+}
+
+.content.collapsedcontent {
+  width: calc(100% - 80px); /* Width when sidebar is collapsed */
+  margin-left: 80px;
+}
+
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+}
+
+.custom-tag {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  position: relative;
+}
+
+.custom-tag:nth-child(odd) {
+  background-color: #2196F3; /* Blue color for odd tags */
+}
+
+.custom-tag:nth-child(even) {
+  background-color: #FF5722; /* Orange color for even tags */
+}
+
+.tag-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tag-label {
+  display: flex;
+  align-items: center;
+}
+
+.custom-tag span::before {
+  content: '•';
+  margin-right: 5px;
+  font-size: 10px;
+  color: white;
+}
+

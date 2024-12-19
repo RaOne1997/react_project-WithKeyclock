@@ -1,0 +1,185 @@
+.sidebar {
+    width: 240px;
+    background-color: #f8f9fa;
+    height: 100vh;
+    position: fixed;
+    transition: width 0.3s;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #333;
+}
+
+.sidebar-title {
+    margin-left: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.nav {
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.sidebar.collapsed .icon {
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ddd;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-size: 16px;
+}
+
+.menu-text {
+    margin-left: 8px;
+    /* Adjust the value as needed */
+}
+
+.custom-accordion,
+.custom-accordion-item {
+    border: none;
+}
+
+.accordion-button {
+    background-color: #f8f9fa !important;
+}
+
+.pp {
+    position: relative;
+}
+
+.flapover-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    /* Adjust this value to position the menu outside the sidebar */
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    /* Rounded corners */
+    z-index: 1000;
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    padding: 5px;
+    color: black;
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateX(-10px);
+    /* Initial position for sliding effect */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Sliding animation */
+}
+
+.flapover-menu::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    /* Position the tip at the right side */
+    margin-top: -5px;
+    /* Center the tip vertically */
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+    /* Create the tip */
+}
+
+.nav-link:hover .flapover-menu {
+    display: block;
+    opacity: 1;
+    /* Show the menu */
+    transform: translateX(0);
+    /* Slide into position */
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+    /* Smooth transition */
+}
+
+.nav-link:hover {
+    color: blue;
+    /* Text color on hover */
+    background-color: lightgray;
+    /* Background color on hover */
+}
+
+
+
+.accordion-button:focus {
+    box-shadow: none;
+    /* Removes the focus shadow (border-like appearance) */
+    outline: none;
+    /* Removes the outline for accessibility focus */
+}
+
+.accordion-button {
+    border: none;
+    /* Removes any border around the button */
+}
+
+.accordion-button:hover {
+    background-color: #e3e4e7 !important;
+    transition: color 0.3s ease;
+    color: blue;
+    /* Background color on hover */
+}
